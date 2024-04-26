@@ -1,0 +1,8 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-8.1.1, pluggy-1.4.0
+rootdir: /iutv/Mes_Montages/12316971/eternal-test-exercises/exercice-6
+collected 3 items
+
+test_recherche.py ..x                                                    [100%]
+
+========================= 2 passed, 1 xfailed in 0.04s =========================
