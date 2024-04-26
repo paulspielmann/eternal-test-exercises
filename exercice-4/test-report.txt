@@ -1,0 +1,14 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-8.1.1, pluggy-1.4.0
+rootdir: /iutv/Mes_Montages/12316971/eternal-test-exercises/exercice-4
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______________________ ERROR collecting test_nombres.py _______________________
+test_nombres.py:4: in <module>
+    def number2anybase(num: int, base: int) -> tuple[int]:
+E   TypeError: 'type' object is not subscriptable
+=========================== short test summary info ============================
+ERROR test_nombres.py - TypeError: 'type' object is not subscriptable
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.13s ===============================

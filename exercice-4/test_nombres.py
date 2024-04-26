@@ -1,8 +1,8 @@
 import art
 
 
-def number2anybase(num: int, base: int) -> tuple[int]:
-    """Tester cette fonction et décrire ses paramètres"""
+def number2anybase(num: int, base: int):
+    """Prends en argument un nombre entier a convertir et une base, retourne un iterateur sur la liste de bit/digit associe"""
     digits = []
     while num:
         digits.append(num % base)
@@ -11,7 +11,7 @@ def number2anybase(num: int, base: int) -> tuple[int]:
 
 
 class NumberDisplay:
-    """Tester cette classe et documenter ce qu'elle fait"""
+    """Creer un objet number display avec comme attribut un entier ainsi qu'une base source (10 par defaut)"""
     TYPE_NUMBERS = {
         "16": "0123456789ABCDEF",
         "10": "0123456789",
@@ -22,6 +22,8 @@ class NumberDisplay:
         self.display_len = display_len
         self.encoding = code
 
+    """Retrieve la base desiree et la base actuelle, encode le nombre actuelle dans la base desiree avec number2anybase()
+    et print to stdout l'ascii art associe"""
     def show_number(self, number: str, number_source_base: int):
         our_encoding = self.TYPE_NUMBERS[self.encoding]
         our_base = len(our_encoding)
@@ -31,4 +33,6 @@ class NumberDisplay:
         ).rjust(self.display_len, our_encoding[0])
         art.tprint(to_show)
 
+nd = NumberDisplay(display_len = 4, code = "10")
 
+nd.show_number("AB", 16)
