@@ -11,5 +11,11 @@ def convert_to_integer(input_list: list) -> list:
     except ValueError:
       print(f"Erreur: {el} ne peut pas être interprêté comme un entier")
       continue
+    except TypeError:
+      print(f"Erreur: {el} ne peut pas être interprêté comme un entier")
+      continue
     output_list.append(v)
   return output_list
+
+def test_convert_to_integer():
+    assert convert_to_integer(["1", "56", "-12", "abc", None, [1, 2, 3], True, 15, "15"]) == [1, 56, -12, 1, 15, 15]
