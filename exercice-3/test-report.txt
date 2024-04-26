@@ -1,0 +1,8 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-8.1.1, pluggy-1.4.0
+rootdir: /iutv/Mes_Montages/12316971/eternal-test-exercises/exercice-3
+collected 1 item
+
+test_selenium.py .                                                       [100%]
+
+============================== 1 passed in 13.66s ==============================

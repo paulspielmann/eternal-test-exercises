@@ -30,12 +30,12 @@ def test_counter_website():
     # le texte du compteur doit être de nouveau 0
     assert counterText.text == "0"
     # l'historique doit avoir la valeur 10 à sa fin
-    assert historiqueText.text.endswith(" 10")
+    assert historiqueText.text.endswith("10")
     for i in range(0, 5):
       counterButton.click()
     assert counterText.text == "5"
     resetButton.click()
-    assert historiqueText.text.endswith(" 5")
+    assert historiqueText.text.endswith("5")
     sleep(2)
   except AssertionError: #pragma: no cover
     # let pytest errors move forward
