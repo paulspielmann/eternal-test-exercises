@@ -1,0 +1,8 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-8.1.1, pluggy-1.4.0
+rootdir: /iutv/Mes_Montages/12316971/eternal-test-exercises/exercice-5
+collected 5 items
+
+test_maths.py ....x                                                      [100%]
+
+========================= 4 passed, 1 xfailed in 0.05s =========================
