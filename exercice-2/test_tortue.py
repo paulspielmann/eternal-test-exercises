@@ -1,3 +1,30 @@
+from enum import Enum
+
+Direction = Enum('Direction', ['Right', 'Down', 'Left', 'Up'])
+class Tortue:
+
+  def __init__(self, x = 0, y = 0):
+    self.x = x
+    self.y = y
+    self.direction = Direction.Down
+
+  def look(self, dir):
+    self.direction = dir 
+
+  def walk(self, dist):
+    if self.direction == Direction.Up:
+        self.y -= dist
+    elif self.direction == Direction.Down:
+        self.y += dist
+    elif self.direction == Direction.Left:
+        self.x -= dist
+    else:
+        self.x += dist
+
+  def teleport(self, x, y):
+    self.x = x
+    self.y = y
+
 def test_move_tortue():
   """On teste une classe Tortue(origine_x, origine_y) pourvue des méthodes walk(int), et look_<direction>()
   ainsi que teleport(x, y).
@@ -26,16 +53,16 @@ def test_move_tortue():
   """
   t = Tortue(x=0, y=0)
   assert t.x == 0 and t.y == 0
-  t.look_right()
+  t.look(Direction.Right)
   t.walk(10)
   assert t.x == 10 and t.y == 0
-  t.look_down()
+  t.look(Direction.Down)
   t.walk(20)
   assert t.x == 10 and t.y == 20
-  t.look_left()
+  t.look(Direction.Left)
   t.walk(4)
   assert t.x == 6 and t.y == 20
-  t.look_up()
+  t.look(Direction.Up)
   t.walk(15)
   assert t.x == 6 and t.y == 5
   t.teleport(21, 42)
